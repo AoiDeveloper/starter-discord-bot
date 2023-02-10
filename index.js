@@ -28,7 +28,7 @@ client.on(Events.MessageCreate, (message) => {
 
       // Get a random line
       const randomLine = lines[Math.floor(Math.random() * lines.length)].trim();
-      message.channel.send(message.member.username + "あなたが使うブキは" + randomLine + "です。");
+      message.channel.send(message.member.displayName + "あなたが使うブキは" + randomLine + "です。");
     } else {
       const users = member.voice.channel.members;
       for (const user of users) {
